@@ -1,0 +1,44 @@
+h3{
+	color: #000038;
+	font-size: 3.0em;
+	font-weight: 200;
+	
+}
+body{
+	font-family: 'Bookman Old Style', serif;
+}
+.letra{
+	font-size: 1.2em;
+}
+hr {
+    margin: 2.5em 0;
+    border-top: 1px solid #ccc;
+}
+
+.message {
+    color: #ccc;
+    font-size: 1.9em;
+    font-weight: 300;
+    font-family: 'Montserrat',sans-serif;
+}
+.sinpadding {
+    padding-left: 0;
+    padding-right: 0;
+}
+.form-control {
+    border-radius: 0;
+    border: 3px solid #e5e5e5;
+    font-size: 1.2em;
+    font-weight: 300;
+    color: #3d76a7;
+    height: 3.2em;
+}
+.btn-default {
+    background-color: #3d76a7;
+    border: 1px solid #3d76a7;
+    border-radius: 0;
+    color: #fff;
+    letter-spacing: 2px;
+    font-size: 1em;
+    font-weight: 700;
+}

@@ -1,0 +1,167 @@
+.contact {
+    position: absolute;
+    z-index: 10;
+    color: #fff;
+    border: 1px solid #fff;
+    text-transform: uppercase;
+    padding: .8em 1.2em .7em;
+    right: 180px;
+    top: 100px;
+    font-size: 0.8em;
+    letter-spacing: 0.1em;
+    -webkit-font-smoothing: initial;
+    -moz-osx-font-smoothing: initial;
+    overflow: hidden;
+
+}
+.row.expanded {
+    max-width: none;
+}
+.container {
+    max-width: 80em;
+}
+.about-text {
+    color: white;
+    background-color: black;
+    
+    background-blend-mode: multiply;
+    padding: 2em 3.2em;
+}
+body{
+     background-color: white;
+}
+.about-text h1 {
+    font-size: 5em;
+    letter-spacing: -0.07em;
+    line-height: 100%;
+    margin-top: 0.8em;
+    color: #38ca13;
+}
+.about-text h2 {
+    font-size: 2em;
+    line-height: 120%;
+    margin-bottom: 0.5em;
+}
+ul.social {
+    margin-left: 0px;
+}
+a {
+    text-decoration: none;
+    line-height: inherit;
+    cursor: pointer;
+}
+.logo h1 a{
+  color: black;
+  opacity: .8;
+  transition: all .2s linear;
+}
+
+.photo-wrapper {
+    padding-top: 735px;
+   height: 100%;
+    background-color: white;
+    text-align: center;
+    border: 2px solid black;
+    background-image: url(../images/MiFoto.png);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 110% auto;
+    z-index: 1;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
+}
+
+.logo h1{
+  font-size: .80em;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: initial;
+  color: black;
+  position: absolute;
+  top: 150px;
+  left: 150px;
+  letter-spacing: .4em;
+  text-transform: uppercase;
+  z-index: 10;
+  opacity: .85;
+}
+
+.logo h1 span{
+  text-transform: none;
+  /*font-style: italic;*/
+  letter-spacing: .2em;
+  opacity: .7;
+  -webkit-font-smoothing: initial;
+  -moz-osx-font-smoothing: initial;
+}
+
+.logo a:hover{
+  opacity: 1;
+  text-shadow:0px 0px 3px rgba(255, 255, 255, .4);
+}
+.text-left {
+    text-align: left;
+}
+.relative{
+  position: relative;
+}
+.Espacio{
+    margin-top: 40px;
+}
+.navbar{
+   background-color: #252525;  
+}
+
+@media (min-width: 1200px){
+    
+}
+
+/*Landscape tablets and medium deskopts*/
+
+@media (min-width: 992px) and (max-width: 1199px){
+     .contact {
+        right: -850px;
+        position: relative;
+   }
+   .logo h1{
+        left: 20px;
+   }
+}
+
+/*Portrait tablets and small deskopts*/
+
+@media (min-width: 730px) and (max-width: 991px){
+     .contact {
+        right: -790px;
+        position: relative;
+        top: 70px;
+   }
+   .logo h1{
+        left: 15px;
+        position: relative;
+        top: 50px;
+   }
+   .Espacio{
+    margin-top: 0px;
+}
+}
+
+
+
+/*Portrait phones and smaller*/
+
+@media (max-width: 480px){
+    .contact {
+        right: -260px;
+        top: 60px;
+        background-color: #252525;
+        position: relative;
+   }
+   .logo h1{
+        left: 20px;
+        top: 40px;
+         position: relative;
+   }
+   .Espacio{
+    margin-top: 0px;
+}
+}
