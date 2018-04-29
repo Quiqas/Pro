@@ -16,9 +16,9 @@
     <!-- Content Header (Page header) -->
     
     <!-- Main content -->
-    
+    <section class="content container-fluid container">
 
-      <!-- <div class="row box box-danger sombra">
+      <div class="row box box-danger sombra">
         <div class="col-md-4 col-xs-12 ">
           <h1 >Only Code</h1>
           <hr>
@@ -32,28 +32,7 @@
       </div>
       <!-- /.row -->
 
-      <!-- Main jumbotron for a primary marketing message or call to action -->
-    <header class="masthead text-center text-white d-flex">
-      <div class="container my-auto ">
-        <div class="row MargenTop">
-          <div class="col-lg-12 mx-auto ">
-            <div class="login-logo">
-              <a href="<?=$GLOBALS['COD']->dir?>/"><img src="<?=$GLOBALS['COD']->dir?>/assets/dist/img/Only.png" class=" responsive Logo-Code-Main" alt="Logo Only Code"></a>
-            </div>
-            <h1 >
-              "La <span class="sp-1">Mejor</span> Manera de Predecir el Futuro es <span class="sp-2">Inventarlo</span>"
-            </h1>
-            <hr>
-          </div>
-          <div class="col-lg-12 mx-auto">
-            <p class="text-faded mb-5">Aprendizaje Ilimitado, Posibilidades Ilimitadas</p>
-            <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Saber Más</a>
-          </div>
-        </div>
-      </div>
-    </header>
-
-
+    </section>
     <!-- /.content -->
   </div>
   

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html>
 <head>
   <meta charset="utf-8">
@@ -14,7 +14,7 @@
   <!-- Ionicons -->
   <link rel="stylesheet" href="<?=$GLOBALS['COD']->dir?>/assets/bower_components/Ionicons/css/ionicons.min.css?<?=$elapsed_time?>">
   <!-- Theme style -->
-  <link rel="stylesheet" href="<?=$GLOBALS['COD']->dir?>/assets/dist/css/AdminLTE.min.css?<?=$elapsed_time?>">
+  <link rel="stylesheet" href="<?=$GLOBALS['COD']->dir?>/assets/dist/css/Custom.min.css?<?=$elapsed_time?>">
 
   <link rel="stylesheet" href="<?=$GLOBALS['COD']->dir?>/assets/dist/css/skins/skin-red.min.css?<?=$elapsed_time?>">
 
@@ -25,6 +25,22 @@
         href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
   
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet"> 
+
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+  <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+
+  <!-- Bootstrap core CSS 
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
+
+    <!-- Custom fonts for this template
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">  -->
+
+    <!-- Plugin CSS -->
+    <link href="<?=$GLOBALS['COD']->dir?>/assets/magnific-popup/magnific-popup.css?<?=$elapsed_time?>" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+   
 </head>
 
 
@@ -44,7 +60,7 @@
     <!-- Header Navbar -->
     <nav class="navbar navbar-static-top" role="navigation">
       <!-- Sidebar toggle button-->
-      <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+      <a  class="sidebar-toggle" data-toggle="push-menu" role="button">
         <span class="sr-only">Toggle navigation</span>
       </a>
       <!-- Navbar Right Menu -->
@@ -175,13 +191,13 @@
               <li class="user-body">
                 <div class="row">
                   <div class="col-xs-4 text-center">
-                    <a href="#">Followers</a>
+                    <a href="#">Seguidores</a>
                   </div>
                   <div class="col-xs-4 text-center">
-                    <a href="#">Sales</a>
+                    <a href="#">Articulos</a>
                   </div>
                   <div class="col-xs-4 text-center">
-                    <a href="#">Friends</a>
+                    <a href="#">Amigos</a>
                   </div>
                 </div>
                 <!-- /.row -->
@@ -189,10 +205,10 @@
               <!-- Menu Footer-->
               <li class="user-footer">
                 <div class="pull-left">
-                  <a href="#" class="btn btn-default btn-flat">Profile</a>
+                  <a href="<?=$GLOBALS['COD']->dir?>/Perfil/" class="btn btn-default btn-flat">Perfil</a>
                 </div>
                 <div class="pull-right">
-                  <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                  <a href="#" class="btn btn-default btn-flat">Salir</a>
                 </div>
               </li>
             </ul>

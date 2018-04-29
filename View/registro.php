@@ -13,7 +13,7 @@
   <!-- Ionicons -->
   <link rel="stylesheet" href="<?=$GLOBALS['COD']->dir?>/assets/bower_components/Ionicons/css/ionicons.min.css">
   <!-- Theme style -->
-  <link rel="stylesheet" href="<?=$GLOBALS['COD']->dir?>/assets/dist/css/AdminLTE.min.css">
+  <link rel="stylesheet" href="<?=$GLOBALS['COD']->dir?>/assets/dist/css/Custom.min.css">
   <!-- iCheck -->
   <link rel="stylesheet" href="<?=$GLOBALS['COD']->dir?>/assets/plugins/iCheck/square/blue.css">
 

@@ -2,7 +2,7 @@
 // --------------------------------------------------------------------
 //  You can set the page title of the header
 // --------------------------------------------------------------------	
-	$page_title = "home";
+	$page_title = "perfil";
 	
 // --------------------------------------------------------------------
 //  Include header
@@ -31,7 +31,7 @@
         <div class="col-md-3">
 
           <!-- Profile Image -->
-          <div class="box box-danger">
+          <div class="box box-danger sombra">
             <div class="box-body box-profile">
               <img class="profile-user-img img-responsive img-circle" src="<?=$GLOBALS['COD']->dir?>/assets/dist/img/user2-160x160.jpg" alt="User profile picture">
 
@@ -51,14 +51,14 @@
                 </li>
               </ul>
 
-              <a href="#" class="btn btn-primary btn-block"><b>Follow</b></a>
+              <a href="#" class="btn btn-danger btn-block"><b>Follow</b></a>
             </div>
             <!-- /.box-body -->
           </div>
           <!-- /.box -->
 
           <!-- About Me Box -->
-          <div class="box box-danger">
+          <div class="box box-danger sombra">
             <div class="box-header with-border">
               <h3 class="box-title">About Me</h3>
             </div>
@@ -106,14 +106,14 @@
               <li><a href="#timeline" data-toggle="tab">Timeline</a></li>
               <li><a href="#settings" data-toggle="tab">Settings</a></li>
             </ul>
-            <div class="tab-content">
+            <div class="tab-content sombra">
               <div class="active tab-pane" id="activity">
                 <!-- Post -->
                 <div class="post">
                   <div class="user-block">
                     <img class="img-circle img-bordered-sm" src="<?=$GLOBALS['COD']->dir?>/assets/dist/img/user2-160x160.jpg" alt="user image">
                         <span class="username">
-                          <a href="#">Jonathan Burke Jr.</a>
+                          <a href="#">Eber Hernandez</a>
                           <a href="#" class="pull-right btn-box-tool"><i class="fa fa-times"></i></a>
                         </span>
                     <span class="description">Shared publicly - 7:30 PM today</span>
@@ -144,7 +144,7 @@
                   <div class="user-block">
                     <img class="img-circle img-bordered-sm" src="<?=$GLOBALS['COD']->dir?>/assets/dist/img/user2-160x160.jpg" alt="User Image">
                         <span class="username">
-                          <a href="#">Sarah Ross</a>
+                          <a href="#">Adilene N.</a>
                           <a href="#" class="pull-right btn-box-tool"><i class="fa fa-times"></i></a>
                         </span>
                     <span class="description">Sent you a message - 3 days ago</span>
@@ -176,7 +176,7 @@
                   <div class="user-block">
                     <img class="img-circle img-bordered-sm" src="<?=$GLOBALS['COD']->dir?>/assets/dist/img/user2-160x160.jpg" alt="User Image">
                         <span class="username">
-                          <a href="#">Adam Jones</a>
+                          <a href="#">Daniel Smith</a>
                           <a href="#" class="pull-right btn-box-tool"><i class="fa fa-times"></i></a>
                         </span>
                     <span class="description">Posted 5 photos - 5 days ago</span>
