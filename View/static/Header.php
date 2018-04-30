@@ -1,11 +1,11 @@
-
+<!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Only Code</title>
+  <title>Only Code | <?=ucfirst($page_title)?> </title>
 
-  <link rel="shortcut icon" type="image/x-icon" href="assets/images/Icono.ico">
+  <link rel="shortcut icon" type="image/x-icon" href="<?=$GLOBALS['COD']->dir?>/assets/images/Icono.ico">
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <link rel="stylesheet" href="<?=$GLOBALS['COD']->dir?>/assets/bower_components/bootstrap/dist/css/bootstrap.min.css?<?=$elapsed_time?>">
@@ -259,6 +259,8 @@
           <i class="fa  fa-user"></i> <span>Login</span></a></li>
         <li><a href="<?=$GLOBALS['COD']->dir?>/registro">
           <i class="fa fa-user-plus"></i> <span>Registro</span></a></li>
+        <li><a href="<?=$GLOBALS['COD']->dir?>/foros">
+          <i class="fa fa-list-alt"></i> <span>Foros</span></a></li>
         <!--
         <li class="treeview">
           <a href="#"><i class="fa fa-link"></i> <span>Multilevel</span>
