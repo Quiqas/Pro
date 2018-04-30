@@ -18,10 +18,10 @@
     <!-- Main content -->
     <section class="content container-fluid container">
 
-    <div class="row">
-        <div class="col-xs-12 text-center blue mb-half">
+    <div class="box box-danger sombra">
+            <div class="box-header with-border text-center blue mb-half">
           <h2>¡Imagina Tu Futuro!</h2>
-        
+        </div>
           <div class="col-xs-12 mb-1 text-center"><h5>¿Qué quieres aprender hoy? ¿Cuál es el trabajo de tus sueños?</h5></div>
           <div class="col-xs-12 mb-1 text-center"><h5><strong>Explora nuestros foros...</strong></h5></div>
 
@@ -37,7 +37,7 @@
               en Android
             </p>
         </div>
-
+      </a>
         <a class="path_card bg-ios" href="<?=$GLOBALS['COD']->dir?>/subforos">
           <div class="path_card--description">
               <p class="white mb-0">
@@ -185,7 +185,7 @@
           </div>
         </a>
 
-
+      </div>
     </section>
     <!-- /.content -->
   </div>
