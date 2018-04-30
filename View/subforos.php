@@ -17,14 +17,15 @@
     <!-- Main content -->
     <section class="content container-fluid container">
 
-		<div class="row">
-        <div class="col-xs-12 text-center blue mb-half">
-          <h2>¡Inserte Titulo de Foro Aquí!</h2>
-        </div>
-      </div>
+		<div class="box box-danger sombra">
+	        <div class="box-header with-border text-center blue mb-half">
+	          <h2>¡Inserte Titulo de Foro Aquí!</h2>
+	        </div>
+	    
           <div class="col-xs-12 mb-1 text-center"><h5>Descripcion del Foro</h5></div>
           
-		<br><br><br>
+		
+		<div class="container">
 		<div class="col-xs-4">
           <!-- Info Boxes Style 2 -->
           <div class="info-box bg-yellow ">
@@ -100,6 +101,9 @@
 	            </div>
 	    	</div>
 	    </div>
+	</div>
+	    </div>
+
           <!-- /.info-box -->
 
 

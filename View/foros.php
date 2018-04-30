@@ -19,7 +19,7 @@
     <section class="content container-fluid container">
 
     <div class="box box-danger sombra">
-            <div class="box-header with-border text-center blue mb-half">
+        <div class="box-header with-border text-center blue mb-half">
           <h2>¡Imagina Tu Futuro!</h2>
         </div>
           <div class="col-xs-12 mb-1 text-center"><h5>¿Qué quieres aprender hoy? ¿Cuál es el trabajo de tus sueños?</h5></div>
