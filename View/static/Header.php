@@ -255,12 +255,15 @@
       <ul class="sidebar-menu" data-widget="tree">
         <li class="header">Secciones</li>
         <!-- Optionally, you can add icons to the links -->
+        <li><a href="<?=$GLOBALS['COD']->dir?>/">
+          <i class="fa fa-home"></i> <span>Home</span></a></li>
         <li class="active"><a href="<?=$GLOBALS['COD']->dir?>/login">
           <i class="fa  fa-user"></i> <span>Login</span></a></li>
         <li><a href="<?=$GLOBALS['COD']->dir?>/registro">
           <i class="fa fa-user-plus"></i> <span>Registro</span></a></li>
         <li><a href="<?=$GLOBALS['COD']->dir?>/foros">
           <i class="fa fa-list-alt"></i> <span>Foros</span></a></li>
+        
         <!--
         <li class="treeview">
           <a href="#"><i class="fa fa-link"></i> <span>Multilevel</span>
