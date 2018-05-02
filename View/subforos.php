@@ -93,8 +93,14 @@
 	            </div>
 	    	</div>
 	    </div>
+
+	    <div class="page-header col-xs-4 ">
+		<a href="<?=$GLOBALS['COD']->dir?>/crearsubforo" class="btn btn-success btn-block btn-lg">Crear Subforo</a>
 	</div>
-	    </div>
+	</div>
+
+	
+</div>
 
           <!-- /.info-box -->
 

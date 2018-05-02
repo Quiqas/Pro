@@ -261,8 +261,14 @@
           <i class="fa  fa-user"></i> <span>Login</span></a></li>
         <li><a href="<?=$GLOBALS['COD']->dir?>/registro">
           <i class="fa fa-user-plus"></i> <span>Registro</span></a></li>
+           <li><a href="<?=$GLOBALS['COD']->dir?>/registro">
+          <i class="fa fa-users"></i> <span>Perfil</span></a></li>
         <li><a href="<?=$GLOBALS['COD']->dir?>/foros">
           <i class="fa fa-list-alt"></i> <span>Foros</span></a></li>
+        <li><a href="<?=$GLOBALS['COD']->dir?>/preguntas">
+          <i class="fa fa-question-circle"></i> <span>Preguntas</span></a></li>
+        <li><a href="<?=$GLOBALS['COD']->dir?>/">
+          <i class="fa fa-cogs"></i> <span>Configuración</span></a></li>
         
         <!--
         <li class="treeview">

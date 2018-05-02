@@ -106,6 +106,7 @@
 <script src="<?=$GLOBALS['COD']->dir?>/assets/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <!-- AdminLTE App -->
 <script src="<?=$GLOBALS['COD']->dir?>/assets/dist/js/adminlte.min.js"></script>
+<script src="<?=$GLOBALS['COD']->dir?>/assets/bower_components/ckeditor/ckeditor.js"></script>
 
 </body>
 </html>

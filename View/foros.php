@@ -174,7 +174,7 @@
           </div>
         </a>
 
-        <a class="path_card bg-crear" href="<?=$GLOBALS['COD']->dir?>/subforos" >
+        <a class="path_card bg-crear" href="<?=$GLOBALS['COD']->dir?>/crearforo" >
           <div class="path_card--description">
               <p class="white mb-0">
                 Crear

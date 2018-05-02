@@ -13,26 +13,7 @@
 
 <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
     
-    <!-- Main content -->
-    
-
-      <!-- <div class="row box box-danger sombra">
-        <div class="col-md-4 col-xs-12 ">
-          <h1 >Only Code</h1>
-          <hr>
-          <h2> ¿Qué es? </h2>
-          <p>Estudiante de Ingeniería en Sistemas Computacionales en el Instituto Tecnológico de Ciudad Juárez. Decidí estudiar esta carrera ya me apasiona mucho todo lo que se puede lograr con tan solo escribir unas pequeñas líneas de código. Me gustan los desafíos y constantemente me encuentro aprendiendo algo nuevo que me ayude a mejorar como programador y como persona.</p>
-        </div>
-        <div class="col-md-offset-1 col-md-7 col-xs-12 MargenTop">
-          <img src='<?=$GLOBALS['COD']->dir?>/assets/images/portada.png?<?$elapsed_time?>' alt="Experiencia web" class="img-responsive center-block">
-        </div>
-      
-      </div>
-      <!-- /.row -->
-
-      <!-- Main jumbotron for a primary marketing message or call to action -->
     <header class="masthead text-center text-white d-flex">
       <div class="container my-auto ">
         <div class="row MargenTop">
@@ -118,7 +99,7 @@
             <h2 class="section-heading">¡Mantengámonos en contacto!</h2>
             <hr class="my-4 hr1">
             <p class="mb-5">
-            ¿Tienes alguna inquietud? Mandanos un email y nosotros te responderemos tan pronto nos sea posible.</p>
+            ¿Tienes alguna inquietud? ¡Mandanos un email y nosotros te responderemos tan pronto nos sea posible!</p>
           </div>
         </div>
       <br><br>
@@ -142,10 +123,10 @@
                   <input type="email" class="form-control" id="email" placeholder="¿Cuál es tu correo electrónico?" name="_replyto" required>
                 </div>
                 <div class="form-group">
-                  <input type="text" class="form-control" id="Telefono" placeholder="¿Cuál es tu número telefónico?" required name="Telefono">
+                  <input type="text" class="form-control" id="Telefono" placeholder="¿Cuál es tu número telefónico?"  name="Telefono">
                 </div>  
                 <div class="form-group">
-                  <input type="text" class="form-control" name="_subject" placeholder="Subject">
+                  <input type="text" class="form-control" name="_subject" placeholder="Tema">
                 </div>
                 <div>
 
