@@ -1,3 +1,14 @@
+<?php
+// --------------------------------------------------------------------
+//  You can set the page title of the header
+// -------------------------------------------------------------------- 
+   
+// --------------------------------------------------------------------
+//  Include header
+// -------------------------------------------------------------------- 
+  include_once('static/connection.php');
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -36,17 +47,25 @@
   <div class="register-box-body">
     <p class="login-box-msg">Registrarse</p>
 
-    <form action="" method="post">
+    <form action="<?=$GLOBALS['COD']->dir?>/signup" method="post">
       <div class="form-group has-feedback">
-        <input type="text" class="form-control" placeholder="Full name">
+        <input type="text" class="form-control" name="Nombre" placeholder="Nombre">
         <span class="glyphicon glyphicon-user form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
-        <input type="email" class="form-control" placeholder="Email">
+        <input type="text" class="form-control" name="Username" placeholder="Username">
+        <span class="glyphicon glyphicon-text-background form-control-feedback"></span>
+      </div>
+       <div class="form-group has-feedback">
+        <input type="number" class="form-control" name="Edad" placeholder="Edad">
+        <span class="glyphicon glyphicon-apple form-control-feedback"></span>
+      </div>
+      <div class="form-group has-feedback">
+        <input type="email" class="form-control" name="Email" placeholder="Email">
         <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
-        <input type="password" class="form-control" placeholder="Password">
+        <input type="password" class="form-control" name="Password" placeholder="Password">
         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
@@ -65,7 +84,7 @@
         </div>
         <!-- /.col -->
         <div class="col-xs-4">
-          <button type="submit" class="btn btn-primary btn-block btn-flat">Registrarse</button>
+          <button type="submit" name="submit" class="btn btn-primary btn-block btn-flat">Registrarse</button>
         </div>
         <!-- /.col -->
       </div>
