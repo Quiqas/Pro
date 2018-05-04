@@ -2,11 +2,91 @@
 // --------------------------------------------------------------------
 //  You can set the page title of the header
 // -------------------------------------------------------------------- 
-   
+   session_start();
 // --------------------------------------------------------------------
 //  Include header
 // -------------------------------------------------------------------- 
-  include_once('static/connection.php');
+if (isset($_SESSION['user_id'])) {
+  Header("Location: /modelo/home");
+}else{
+  if (isset($_POST['s'])) {
+
+    /* 
+    Se incluye el archivo Connection para hacer conexion a la base de datos.
+    */
+    include_once 'static/connection.php';
+
+    /* Almaceno los datos que son enviados del formulario en un arreglo.*/
+
+    $datetime = date_create()->format('Y-m-d H:i:s');
+
+    $Nombre = mysqli_real_escape_string($connection, $_POST['Nombre']);
+    $Username = mysqli_real_escape_string($connection, $_POST['Username']);
+    $Edad = mysqli_real_escape_string($connection, $_POST['Edad']);
+    $Email = mysqli_real_escape_string($connection, $_POST['Email']);
+    $Password = mysqli_real_escape_string($connection, $_POST['Password']);
+    $Password1 = mysqli_real_escape_string($connection, $_POST['Password1']);
+    $Date = mysqli_real_escape_string($connection, $datetime);
+    $Type = mysqli_real_escape_string($connection, 'Normal');
+        
+    $sql = "SELECT * FROM usuarios WHERE user_nickname = ? OR user_email = ?";
+    $stmt = mysqli_stmt_init($connection);
+
+    if (!mysqli_stmt_prepare($stmt, $sql)) {
+      echo "SQL Error";
+    }else{
+      mysqli_stmt_bind_param($stmt, "ss", $Username, $Email);
+      mysqli_stmt_execute($stmt);
+      $result = mysqli_stmt_get_result($stmt);
+      $resultcheck = mysqli_num_rows($result);
+    }
+    if ($resultcheck > 0 ) {
+      echo '<div class="col-md-3">
+            <div class="box box-danger box-solid">
+              <div class="box-header with-border">
+                <h3 class="box-title">Error</h3>
+
+                <div class="box-tools pull-right">
+                  <button class="btn btn-box-tool" type="button" data-widget="remove"><i class="fa fa-times"></i></button>
+                </div>
+                <!-- /.box-tools -->
+              </div>
+              <!-- /.box-header -->
+              <div class="box-body">
+                El nombre de usuario o contraseña ya esta registrado.
+              </div>
+              <!-- /.box-body -->
+            </div>
+            <!-- /.box -->
+          </div>';
+    }else{
+      if($Password == $Password1){
+        //Encriptando Contraseña '$Nombre', '$Edad', '$Username', '$Email', '$EncriptPass' ,'$Type', '$Date'
+        $EncriptPass = password_hash($Password, PASSWORD_DEFAULT);
+        //Almacenando los datos
+        $sql = "INSERT INTO usuarios (user_name, user_age, user_nickname, user_email, user_password, user_type, user_date_register) VALUES (?, ?, ?, ?, ?, ?, '$Date');";
+
+        $stmt = mysqli_stmt_init($connection);
+
+        if (!mysqli_stmt_prepare($stmt, $sql)) {
+          echo "SQL Error";
+        }else{
+          mysqli_stmt_bind_param($stmt, "sissss", $Nombre, $Edad ,$Username, $Email, $EncriptPass, $Type);
+          mysqli_stmt_execute($stmt);
+          $result = mysqli_stmt_get_result($stmt);
+          
+        }
+           
+            
+            $connection->close();
+            Header("Location: /modelo/home");
+            exit();
+          }
+            
+
+    }
+  }
+}
 ?>
 
 <!DOCTYPE html>
@@ -47,29 +127,29 @@
   <div class="register-box-body">
     <p class="login-box-msg">Registrarse</p>
 
-    <form action="<?=$GLOBALS['COD']->dir?>/signup" method="post">
+    <form action="" Method="POST">
       <div class="form-group has-feedback">
-        <input type="text" class="form-control" name="Nombre" placeholder="Nombre">
+        <input type="text" class="form-control" name="Nombre" required placeholder="Nombre">
         <span class="glyphicon glyphicon-user form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
-        <input type="text" class="form-control" name="Username" placeholder="Username">
+        <input type="text" class="form-control" name="Username" pattern="[A-Za-z0-9_-]{1,20}" title="De Ocho o veinte caracteres, Caracteres Permitidos: A-Za-z0-9_-" required placeholder="Username">
         <span class="glyphicon glyphicon-text-background form-control-feedback"></span>
       </div>
        <div class="form-group has-feedback">
-        <input type="number" class="form-control" name="Edad" placeholder="Edad">
+        <input type="number" class="form-control" name="Edad" required placeholder="Edad">
         <span class="glyphicon glyphicon-apple form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
-        <input type="email" class="form-control" name="Email" placeholder="Email">
+        <input type="email" class="form-control" name="Email" required placeholder="Email">
         <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
-        <input type="password" class="form-control" name="Password" placeholder="Password">
+        <input type="password" class="form-control" name="Password" required pattern="[A-Za-z0-9_-]{8,20}" title="De Ocho o veinte caracteres, Caracteres Permitidos: A-Za-z0-9_-" placeholder="Password">
         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
-        <input type="password" class="form-control" placeholder="Retype password">
+        <input type="password" class="form-control" name="Password1" required pattern="[A-Za-z0-9_-]{8,20}" title="De Ocho o veinte caracteres, Caracteres Permitidos: A-Za-z0-9_-" placeholder="Retype password">
         <span class="glyphicon glyphicon-log-in form-control-feedback"></span>
       </div>
       <div class="row">
@@ -84,7 +164,7 @@
         </div>
         <!-- /.col -->
         <div class="col-xs-4">
-          <button type="submit" name="submit" class="btn btn-primary btn-block btn-flat">Registrarse</button>
+          <button type="submit" name="s" id = "s" class="btn btn-primary btn-block btn-flat">Registrarse</button>
         </div>
         <!-- /.col -->
       </div>
