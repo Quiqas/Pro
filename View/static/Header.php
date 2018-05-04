@@ -74,154 +74,75 @@ session_start();
 
           <!-- Menu de Mensajes -->
 
-          <li class="dropdown messages-menu">
-            <!-- Menu toggle button -->
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <i class="fa fa-envelope-o"></i>
-              <span class="label label-success">4</span>
-            </a>
-            <ul class="dropdown-menu">
-              <li class="header">You have 4 messages</li>
-              <li>
-                <!-- inner menu: contains the messages -->
-                <ul class="menu">
-                  <li><!-- start message -->
-                    <a href="#">
-                      <div class="pull-left">
-                        <!-- User Image -->
-                        <img src="<?=$GLOBALS['COD']->dir?>/assets/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
-                      </div>
-                      <!-- Message title and timestamp -->
-                      <h4>
-                        Support Team
-                        <small><i class="fa fa-clock-o"></i> 5 mins</small>
-                      </h4>
-                      <!-- The message -->
-                      <p>Why not buy a new awesome theme?</p>
-                    </a>
-                  </li>
-                  <!-- end message -->
-                </ul>
-                <!-- /.menu -->
-              </li>
-              <li class="footer"><a href="#">See All Messages</a></li>
-            </ul>
-          </li>
+          
           <!-- Fin Menu de Mensajes -->
 
           <!-- Menu Notificaciones -->
-          <li class="dropdown notifications-menu">
-            <!-- Menu toggle button -->
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <i class="fa fa-bell-o"></i>
-              <span class="label label-warning">10</span>
-            </a>
-            <ul class="dropdown-menu">
-              <li class="header">You have 10 notifications</li>
-              <li>
-                <!-- Inner Menu: contains the notifications -->
-                <ul class="menu">
-                  <li><!-- start notification -->
-                    <a href="#">
-                      <i class="fa fa-users text-aqua"></i> 5 new members joined today
-                    </a>
-                  </li>
-                  <!-- end notification -->
-                </ul>
-              </li>
-              <li class="footer"><a href="#">View all</a></li>
-            </ul>
-          </li>
+          
 
           <!-- Fin Menu Notificacion -->
 
           <!-- Tasks Menu -->
-          <li class="dropdown tasks-menu">
-            <!-- Menu Toggle Button -->
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <i class="fa fa-flag-o"></i>
-              <span class="label label-danger">9</span>
-            </a>
-            <ul class="dropdown-menu">
-              <li class="header">You have 9 tasks</li>
-              <li>
-                <!-- Inner menu: contains the tasks -->
-                <ul class="menu">
-                  <li><!-- Task item -->
-                    <a href="#">
-                      <!-- Task title and progress text -->
-                      <h3>
-                        Design some buttons
-                        <small class="pull-right">20%</small>
-                      </h3>
-                      <!-- The progress bar -->
-                      <div class="progress xs">
-                        <!-- Change the css width attribute to simulate progress -->
-                        <div class="progress-bar progress-bar-aqua" style="width: 20%" role="progressbar"
-                             aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
-                          <span class="sr-only">20% Complete</span>
-                        </div>
-                      </div>
-                    </a>
-                  </li>
+          
                   <!-- end task item -->
-                </ul>
-              </li>
-              <li class="footer">
-                <a href="#">View all tasks</a>
-              </li>
-            </ul>
-          </li>
+                
+        <?php 
 
-          <!-- User Account Menu -->
-          <li class="dropdown user user-menu">
-            <!-- Menu Toggle Button -->
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <!-- The user image in the navbar-->
-              <img src="<?=$GLOBALS['COD']->dir?>/assets/dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
-              <!-- hidden-xs hides the username on small devices so only the image appears. -->
-              <span class="hidden-xs">Cristhian A. Hernández M.</span>
-            </a>
-            <ul class="dropdown-menu">
-              <!-- The user image in the menu -->
-              <li class="user-header">
-                <img src="<?=$GLOBALS['COD']->dir?>/assets/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+          if (isset($_SESSION['user_id'])) {
+        ?>
+            <!-- User Account Menu -->
+            <li class="dropdown user user-menu">
+              <!-- Menu Toggle Button -->
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <!-- The user image in the navbar-->
+                <img src="<?=$GLOBALS['COD']->dir?>/assets/dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
+                <!-- hidden-xs hides the username on small devices so only the image appears. -->
+                <span class="hidden-xs"> <?php echo $_SESSION['user_name']?></span>
+              </a>
+              <ul class="dropdown-menu">
+                <!-- The user image in the menu -->
+                <li class="user-header">
+                  <img src="<?=$GLOBALS['COD']->dir?>/assets/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
 
-                <p>
-                  Cristhian A. Hernánde Moreno - Web Developer
-                  <small>Miembro desde Abril 2018</small>
-                </p>
-              </li>
-              <!-- Menu Body -->
-              <li class="user-body">
-                <div class="row">
-                  <div class="col-xs-4 text-center">
-                    <a href="#">Seguidores</a>
+                  <p>
+                    <?php echo $_SESSION['user_name']?> - Web Developer
+                    <small>Miembro desde  
+                    <?php 
+                    $date = date_create($_SESSION['user_date']);
+                    $fecha=date_format($date, 'M-Y');
+                    echo $fecha;
+
+                     ?></small>
+                  </p>
+                </li>
+                <!-- Menu Body -->
+                <li class="user-body">
+                  <div class="row">
+                    <div class="col-xs-4 text-center">
+                      <a href="#">Seguidores</a>
+                    </div>
+                    <div class="col-xs-4 text-center">
+                      <a href="#">Articulos</a>
+                    </div>
+                    <div class="col-xs-4 text-center">
+                      <a href="#">Amigos</a>
+                    </div>
                   </div>
-                  <div class="col-xs-4 text-center">
-                    <a href="#">Articulos</a>
+                  <!-- /.row -->
+                </li>
+                <!-- Menu Footer-->
+                <li class="user-footer">
+                  <div class="pull-left">
+                    <a href="<?=$GLOBALS['COD']->dir?>/Perfil" class="btn btn-default btn-flat">Perfil</a>
                   </div>
-                  <div class="col-xs-4 text-center">
-                    <a href="#">Amigos</a>
+                  <div class="pull-right">
+                    <a href="<?=$GLOBALS['COD']->dir?>/logout" class="btn btn-default btn-flat">Salir</a>
                   </div>
-                </div>
-                <!-- /.row -->
-              </li>
-              <!-- Menu Footer-->
-              <li class="user-footer">
-                <div class="pull-left">
-                  <a href="<?=$GLOBALS['COD']->dir?>/Perfil/" class="btn btn-default btn-flat">Perfil</a>
-                </div>
-                <div class="pull-right">
-                  <a href="#" class="btn btn-default btn-flat">Salir</a>
-                </div>
-              </li>
-            </ul>
-          </li>
-          <!-- Control Sidebar Toggle Button -->
-          <li>
-            <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
-          </li>
+                </li>
+              </ul>
+            </li>
+            <?php } ?>
+          
         </ul>
       </div>
     </nav>
@@ -231,18 +152,23 @@ session_start();
 
     <!-- sidebar: style can be found in sidebar.less -->
     <section class="sidebar">
+      
+      <?php 
 
-      <!-- Sidebar user panel (optional) -->
-      <div class="user-panel">
-        <div class="pull-left image">
-          <img src="<?=$GLOBALS['COD']->dir?>/assets/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+        if (isset($_SESSION['user_id'])) {
+      ?>
+        <!-- Sidebar user panel (optional) -->
+        <div class="user-panel">
+          <div class="pull-left image">
+            <img src="<?=$GLOBALS['COD']->dir?>/assets/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+          </div>
+          <div class="pull-left info">
+            <p><?php echo $_SESSION['user_name']?></p>
+            <!-- Status -->
+            <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+          </div>
         </div>
-        <div class="pull-left info">
-          <p>Cristhian A. Hernández</p>
-          <!-- Status -->
-          <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
-        </div>
-      </div>
+      <?php } ?>
 
       <!-- search form (Optional) -->
       <form action="#" method="get" class="sidebar-form">
@@ -262,11 +188,15 @@ session_start();
         <!-- Optionally, you can add icons to the links -->
         <li><a href="<?=$GLOBALS['COD']->dir?>/">
           <i class="fa fa-home"></i> <span>Home</span></a></li>
-        <li class="active"><a href="<?=$GLOBALS['COD']->dir?>/login">
-          <i class="fa  fa-user"></i> <span>Login</span></a></li>
-        <li><a href="<?=$GLOBALS['COD']->dir?>/registro">
-          <i class="fa fa-user-plus"></i> <span>Registro</span></a></li>
-           <li><a href="<?=$GLOBALS['COD']->dir?>/registro">
+        <?php 
+        if (!isset($_SESSION['user_id'])) {
+        ?>
+          <li class="active"><a href="<?=$GLOBALS['COD']->dir?>/login">
+            <i class="fa  fa-user"></i> <span>Login</span></a></li>
+          <li><a href="<?=$GLOBALS['COD']->dir?>/registro">
+            <i class="fa fa-user-plus"></i> <span>Registro</span></a></li>
+        <?php } ?>
+        <li><a href="<?=$GLOBALS['COD']->dir?>/perfil">
           <i class="fa fa-users"></i> <span>Perfil</span></a></li>
         <li><a href="<?=$GLOBALS['COD']->dir?>/foros">
           <i class="fa fa-list-alt"></i> <span>Foros</span></a></li>

@@ -74,7 +74,8 @@ if (isset($_SESSION['user_id'])) {
               $_SESSION['user_email'] = $row['user_email'];
               $_SESSION['user_nickname'] = $row['user_nickname'];
               $_SESSION['user_age'] = $row['user_age'];
-              $_SESSION['user_type'] = $row['user_date_register'];
+              $_SESSION['user_date'] = $row['user_date_register'];
+              $_SESSION['user_type'] = $row['user_type'];
 
               $connection->close();
               Header("Location: /modelo/home");

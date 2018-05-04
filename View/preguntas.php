@@ -38,26 +38,47 @@
 									</div>
 									<div class="dwqa-questions-list">
 									<!-- Estructura Pregunta -->
-										<div class="dwqa-question-item dwqa-status-answered">
-											<header class="dwqa-question-title">
-												<a href="https://www.designwall.com/question/dwqa-pro-vs-free/">¿¡Hola Mundo!?</a>
-											</header>
-											<div class="dwqa-question-meta">
-												<span class="label label-primary">Resuelta</span>
-												<span>
-												<a href="https://www.designwall.com/question/?user=jpregullano">
-												<img src="//www.gravatar.com/avatar/22a70068d0fb8e1dec9b7c057cb8fdb1?s=48&#038;r=g&#038;d=mm" class="avatar user-45136-avatar avatar-48 photo" width="48" height="48" alt="Profile photo of jpregullano" />Cristhian</a>
-												publicada el 08/05/2018</span>
-											</div>
-											<div class="dwqa-question-stats">
-												<span class="dwqa-views-count">
-													<strong>58</strong> Vistas
-												</span>
-												<span class="dwqa-answers-count">
-													<strong>1</strong> Respuestas
-												</span>
-											</div>
-										</div>
+										<div class="box box-danger">
+		            						<div class="box-header with-border">
+		              								<h3 class="box-title">Preguntas Recientes...</h3>
+													
+		            						</div>
+								            <!-- /.box-header -->
+								            <div class="box-body">
+								              <ul class="products-list product-list-in-box">
+								                <li class="item">
+								                  <div class="product-img">
+								                    <img alt="Product Image" src="<?=$GLOBALS['COD']->dir?>/assets/images/photo1.png">
+								                  </div>
+								                  <div class="product-info">
+								                    <a class="product-title" href="javascript:void(0)">Samsung TV
+								                      <span class="label label-warning pull-right">$1800</span></a>
+								                    <span class="product-description">
+								                          Samsung 32" 1080p 60Hz LED Smart HDTV.
+								                        </span>
+								                  </div>
+								                </li>
+								                <!-- /.item -->
+								                <li class="item">
+								                  <div class="product-img">
+								                    <img alt="Product Image" src="<?=$GLOBALS['COD']->dir?>/assets/images/photo1.png">
+								                  </div>
+								                  <div class="product-info">
+								                    <a class="product-title" href="javascript:void(0)">Bicycle
+								                      <span class="label label-info pull-right">$700</span></a>
+								                    <span class="product-description">
+								                          26" Mongoose Dolomite Men's 7-speed, Navy Blue.
+								                        </span>
+								                  </div>
+								                </li>
+								                <!-- /.item -->
+								                <!-- /.item -->
+								              </ul>
+								            </div>
+								            <!-- /.box-body -->
+								          
+								            <!-- /.box-footer -->
+								          </div>
 									<!-- Fin Pregunta -->
 									</div>
 								</div>
