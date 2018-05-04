@@ -72,6 +72,14 @@ session_start();
       <div class="navbar-custom-menu">
         <ul class="nav navbar-nav">
 
+          <?php 
+        if (!isset($_SESSION['user_id'])) {
+        ?>
+           <li class="active"><a href="<?=$GLOBALS['COD']->dir?>/login">
+            <i class="fa  fa-user"></i> <span>Login</span></a></li>
+          <li><a href="<?=$GLOBALS['COD']->dir?>/registro">
+            <i class="fa fa-user-plus"></i> <span>Registro</span></a></li>
+        <?php } ?>
           <!-- Menu de Mensajes -->
 
           
@@ -186,23 +194,23 @@ session_start();
       <ul class="sidebar-menu" data-widget="tree">
         <li class="header">Secciones</li>
         <!-- Optionally, you can add icons to the links -->
-        <li><a href="<?=$GLOBALS['COD']->dir?>/">
+        <li <?php if($page_title === "home"): ?> class="active" <?php endif;?>><a  href="<?=$GLOBALS['COD']->dir?>/">
           <i class="fa fa-home"></i> <span>Home</span></a></li>
-        <?php 
-        if (!isset($_SESSION['user_id'])) {
+        
+          
+      <?php 
+        if (isset($_SESSION['user_id'])) {
         ?>
-          <li class="active"><a href="<?=$GLOBALS['COD']->dir?>/login">
-            <i class="fa  fa-user"></i> <span>Login</span></a></li>
-          <li><a href="<?=$GLOBALS['COD']->dir?>/registro">
-            <i class="fa fa-user-plus"></i> <span>Registro</span></a></li>
-        <?php } ?>
-        <li><a href="<?=$GLOBALS['COD']->dir?>/perfil">
+        <li <?php if($page_title == "perfil"): ?> class="active" <?php endif;?>><a  href="<?=$GLOBALS['COD']->dir?>/perfil">
           <i class="fa fa-users"></i> <span>Perfil</span></a></li>
-        <li><a href="<?=$GLOBALS['COD']->dir?>/foros">
+      <?php } ?> 
+        <li <?php if($page_title == "noticias"): ?> class="active" <?php endif;?>><a  href="<?=$GLOBALS['COD']->dir?>/noticias">
+          <i class="fa  fa-book"></i> <span>Noticias</span></a></li>
+        <li <?php if($page_title == "foros"): ?> class="active" <?php endif;?>><a  href="<?=$GLOBALS['COD']->dir?>/foros">
           <i class="fa fa-list-alt"></i> <span>Foros</span></a></li>
-        <li><a href="<?=$GLOBALS['COD']->dir?>/preguntas">
+        <li <?php if($page_title == "preguntas"): ?> class="active" <?php endif;?>><a  href="<?=$GLOBALS['COD']->dir?>/preguntas">
           <i class="fa fa-question-circle"></i> <span>Preguntas</span></a></li>
-        <li><a href="<?=$GLOBALS['COD']->dir?>/">
+        <li <?php if($page_title == "configuracion"): ?> class="active" <?php endif;?>><a  href="<?=$GLOBALS['COD']->dir?>/">
           <i class="fa fa-cogs"></i> <span>Configuración</span></a></li>
         
         <!--

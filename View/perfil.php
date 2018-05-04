@@ -3,11 +3,18 @@
 //  You can set the page title of the header
 // --------------------------------------------------------------------	
 	$page_title = "perfil";
-	
+
+
+
 // --------------------------------------------------------------------
 //  Include header
 // --------------------------------------------------------------------	
 	include_once('static/Header.php');
+
+
+  if (!isset($_SESSION['user_id'])) {
+    Header("Location: /modelo/home");
+  }
 ?>
 
 
