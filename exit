@@ -1,0 +1,83 @@
+[33mcommit 6b6cbbcb2f6a1f0cf3b5e5ed7f95278ff1e167eb[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: Cristhian <albert502@outlook.com>
+Date:   Fri May 4 00:24:39 2018 -0600
+
+    Se agregaron mas cambios relacionados con el login y ahora detecta cual pagina es la activa
+
+[33mcommit eeebee866fa17cb1cae08c24dd649ec9552bd401[m
+Author: Cristhian <albert502@outlook.com>
+Date:   Thu May 3 21:52:14 2018 -0600
+
+    Se cambio la estructura de las preguntas y se le aplico el log in a header
+
+[33mcommit 71795a01a207f545e9082266544f013e5b32504b[m
+Author: Cristhian <albert502@outlook.com>
+Date:   Thu May 3 20:49:09 2018 -0600
+
+    Se agrego el sistema de Log in y Log out
+
+[33mcommit 4b214703c1e520d303d3bf6e2e13d2794e6567b1[m
+Author: Cristhian <albert502@outlook.com>
+Date:   Thu May 3 11:17:31 2018 -0600
+
+    Se agregaron campos a registro.php y se creo el archivo connection para realizar una conexion a la base de datos
+
+[33mcommit 79ef197cf376c6f105c81c94d84b8918b0008dc6[m
+Author: Cristhian <albert502@outlook.com>
+Date:   Tue May 1 20:23:01 2018 -0600
+
+    Se termino el front end la pagina
+
+[33mcommit 240c248af19daa80e60342b1fe9e31ebef143968[m
+Author: Cristhian <albert502@outlook.com>
+Date:   Sun Apr 29 22:41:26 2018 -0600
+
+    Se agrego la seccion Home al menu desplegable y se le hizo cambios a los subforos en el archivo subforo.php
+
+[33mcommit 0051dd6772096776e0d09cfc93b9d76fa32c351a[m[33m ([m[1;31morigin/Box[m[33m, [m[1;32mBox[m[33m)[m
+Author: Cristhian <albert502@outlook.com>
+Date:   Sun Apr 29 21:58:04 2018 -0600
+
+    Se agrego el elemento Box a Subforos
+
+[33mcommit 2f0a70badfb2fbb4cfa013fd93b92fdc60178331[m
+Author: Cristhian <albert502@outlook.com>
+Date:   Sun Apr 29 21:51:06 2018 -0600
+
+    Se introdujo en contenido de Foros en el elemento de diseno Box y al archivo foros.css se le agregaron las sombras
+
+[33mcommit bc232ab57e00fc891a2c6a2a9c94469081f3dab7[m
+Author: Cristhian <albert502@outlook.com>
+Date:   Sun Apr 29 21:45:47 2018 -0600
+
+    Se elimino el archivo de texto
+
+[33mcommit 2c06f3ce86111044b549d6879e119f2cd0ac5e06[m
+Author: Cristhian <albert502@outlook.com>
+Date:   Sun Apr 29 21:44:34 2018 -0600
+
+    Se agrego el archivo de texto
+
+[33mcommit cca11bb93ec7ce625a2431e983d4d2f4de7a48d8[m
+Author: Cristhian <albert502@outlook.com>
+Date:   Sun Apr 29 21:42:41 2018 -0600
+
+    Se termino la pagina Home al igual que la pagina Foros y subforos
+
+[33mcommit de87d9965ec245c6b1169b6f8eb3db6044b4edba[m
+Author: Cristhian <albert502@outlook.com>
+Date:   Sun Apr 29 00:34:05 2018 -0600
+
+    Se agrego la primera seccion a la pagina home
+
+[33mcommit 1d1c0e210f02a3a3acff12c1694ef0f68f3251fa[m
+Author: Cristhian <albert502@outlook.com>
+Date:   Sat Apr 21 00:11:03 2018 -0600
+
+    Proyecto de ingenieria
+
+[33mcommit f7434e7f3f75fe52905065453d1897e69933d6ba[m
+Author: Cristhian <albert502@outlook.com>
+Date:   Sun Apr 15 17:22:31 2018 -0600
+
+    Se agrego el proyecto completo de Kevin Brayan

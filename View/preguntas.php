@@ -5,9 +5,25 @@
 	$page_title = "preguntas";
 	
 // --------------------------------------------------------------------
-//  Include header
+//  Include header    substr($Subforos['Descripcion'],0,65)
 // --------------------------------------------------------------------	
 	include_once('static/Header.php');
+	include_once 'static/connection.php';
+
+
+    $sql = "SELECT * FROM question";
+    $stmt = mysqli_stmt_init($connection);
+
+    if (!mysqli_stmt_prepare($stmt, $sql)) {
+      echo "SQL Error";
+    }else{
+      mysqli_stmt_execute($stmt);
+      $result = mysqli_stmt_get_result($stmt);
+      $resultcheck = mysqli_num_rows($result);
+
+     
+
+    }
 ?>
 
 <div class="content-wrapper">	
@@ -46,31 +62,21 @@
 								            <!-- /.box-header -->
 								            <div class="box-body">
 								              <ul class="products-list product-list-in-box">
+								                <?php while ($row = mysqli_fetch_assoc($result)){ ?>
+								                 <!-- /.item -->
 								                <li class="item">
 								                  <div class="product-img">
 								                    <img alt="Product Image" src="<?=$GLOBALS['COD']->dir?>/assets/images/photo1.png">
 								                  </div>
 								                  <div class="product-info">
-								                    <a class="product-title" href="javascript:void(0)">Samsung TV
-								                      <span class="label label-warning pull-right">$1800</span></a>
+								                    <a class="product-title" href="javascript:void(0)"><?=$row['question_title'];?>
+								                      <span class="label label-success pull-right"><?=$row['question_status'];?></span></a>
 								                    <span class="product-description">
-								                          Samsung 32" 1080p 60Hz LED Smart HDTV.
+								                          <?=substr($row['question_description'],0,65);?>
 								                        </span>
 								                  </div>
 								                </li>
-								                <!-- /.item -->
-								                <li class="item">
-								                  <div class="product-img">
-								                    <img alt="Product Image" src="<?=$GLOBALS['COD']->dir?>/assets/images/photo1.png">
-								                  </div>
-								                  <div class="product-info">
-								                    <a class="product-title" href="javascript:void(0)">Bicycle
-								                      <span class="label label-info pull-right">$700</span></a>
-								                    <span class="product-description">
-								                          26" Mongoose Dolomite Men's 7-speed, Navy Blue.
-								                        </span>
-								                  </div>
-								                </li>
+								                <?php } ?>
 								                <!-- /.item -->
 								                <!-- /.item -->
 								              </ul>
